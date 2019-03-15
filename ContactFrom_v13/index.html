@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Data Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+	#lastDiv{
+		border: 4px solid black;
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 10%;
+		margin-bottom: 20%;
+	}
+	#btn{
+		color: black;
+	}
+	#getNameFromUser{
+		background-color: rgb(72, 161, 161);
+		font-size: 50px;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		border-radius: 5px;
+
+	}
+	#portfolio{
+		background-color: rgb(97, 134, 134);
+		text-align: center;
+        border-bottom: 2px solid black;
+		margin-bottom: 5px;		
+	}
+	</style>
+<!--===============================================================================================-->
+</head>
+<body>
+	<div id="portfolio">
+		<a href="https://hishmatraiportfolio.firebaseapp.com/" target="_blank"><button><b>My PortFolio</b></button></a>
+	</div>
+
+
+<div id="getNameFromUser">
+
+	</div>
+
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" id="reseatData">
+				<span class="contact100-form-title">
+					Data Form
+				</span>
+
+
+
+
+
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Name</span>
+					<input class="input100" type="text" name="name" id="input1" placeholder="Name...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+
+
+				<div class="wrap-input100 validate-input" data-validate = "Roll No is required">
+					<span class="label-input100">Roll No</span>
+					<input class="input100" type="text" name="Roll No" id="inputBox2ForRollNo" placeholder="Enter Roll No...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+
+				<div class="wrap-input100" data-validate = "Marks are required">
+					<span class="label-input100">English</span>
+					<input class="input100" type="text" name="English" id="inputBox3ForEnglish" placeholder="Enter English Marks...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+				<div class="wrap-input100" data-validate = "Marks are required">
+					<span class="label-input100">Maths</span>
+					<input class="input100" type="text" name="Maths"  id="inputBox4ForMaths"placeholder="Enter Maths Marks...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+
+
+				<div class="wrap-input100" data-validate = "Marks are required">
+					<span class="label-input100">JavaScript</span>
+					<input class="input100" type="text" name="JavaScript" id="inputBox5ForJavaScript" placeholder="Enter JAvaScript Marks...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+
+
+				<div class="wrap-input100" data-validate = "Marks are required">
+					<span class="label-input100">HTML5</span>
+					<input class="input100" type="text" name="HTML5"  id="inputBox6ForHTML5"placeholder="Enter HTML5 Marks...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+
+
+				<div class="wrap-input100" data-validate = "Marks are required">
+					<span class="label-input100">CSS</span>
+					<input class="input100" type="text" name="CSS"  id="inputBox7ForCSS"placeholder="Enter CSS Marks...">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<input type="button" value="submit" class="contact100-form-btn" id= "btn" onclick="buttonForSubmit()">
+					</div>
+				</div>
+			</form>
+
+			<!-- ==============================     search                -->
+
+
+			<div class="wrap-input100" data-validate = "Marks are required">
+				<span class="label-input100">Search</span>
+				<input class="input100" type="text" name="search" id="searchBox" placeholder="Enter Roll No Seach  Your Result ...">
+				<span class="focus-input100"></span>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<div class="container-contact100-form-btn">
+		<div class="wrap-contact100-form-btn">
+			<div class="contact100-form-bgbtn"></div>
+			<input type="button" value="search" class="contact100-form-btn" id="btn" onclick="buttonForSearch()">
+
+		</div>
+	</div><br>
+	<div class="container-contact100-form-btn">
+		<div class="wrap-contact100-form-btn">
+			<div class="contact100-form-bgbtn"></div>
+			<input type="button" value="LogOut" class="contact100-form-btn" id="btn" onclick="buttonForLogOur()">
+
+		</div>
+	</div>
+
+
+
+<div id="lastDiv">
+
+<center><h1>Result</h1>
+
+	<table>
+		<tr>
+			<td>Name : </td>
+			<td id="saveData1"></td>
+		</tr>
+		<tr>
+				<td>Roll No : </td>
+				<td id="saveData2"></td>
+			</tr>
+			<tr>
+					<td>English : </td>
+					<td id="saveData3"></td>
+				</tr>
+				<tr>
+						<td>Maths : </td>
+						<td id="saveData4"></td>
+					</tr>
+					<tr>
+							<td>JScript : </td>
+							<td id="saveData5"></td>
+						</tr>
+						<tr>
+								<td>HTML5 : </td>
+								<td id="saveData6"></td>
+							</tr>
+							<tr>
+									<td>CSS : </td>
+									<td id="saveData7"></td>
+								</tr>
+								<tr>
+										<td>All % : </td>
+										<td id="saveData8"></td>
+									</tr>
+								</center>
+	</table>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
